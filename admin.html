@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Staff Portal · Raas Garba 2026</title>
+<meta name="robots" content="noindex,nofollow">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{--card:rgba(34,8,40,.8);--ink:#fff4e0;--mute:#e2c3a4;--gold:#f5b83d;--line:rgba(245,184,61,.28);--bad:#ffb4ab;--ok:#3ecf8e}
+*{box-sizing:border-box}
+html{min-height:100%;background-color:#4a0d33;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23f5b83d' stroke-opacity='.17' stroke-width='1'%3E%3Ccircle cx='60' cy='60' r='44'/%3E%3Ccircle cx='60' cy='60' r='30'/%3E%3Ccircle cx='60' cy='60' r='14'/%3E%3Cpath d='M60 16v88M16 60h88M29 29l62 62M91 29L29 91'/%3E%3C/g%3E%3Cg fill='%23f5b83d' fill-opacity='.15'%3E%3Ccircle cx='60' cy='60' r='4'/%3E%3Ccircle cx='0' cy='0' r='6'/%3E%3Ccircle cx='120' cy='0' r='6'/%3E%3Ccircle cx='0' cy='120' r='6'/%3E%3Ccircle cx='120' cy='120' r='6'/%3E%3C/g%3E%3C/svg%3E"),
+radial-gradient(circle at 12% 8%,rgba(255,160,30,.42),transparent 42%),radial-gradient(circle at 88% 22%,rgba(236,72,153,.30),transparent 44%),linear-gradient(165deg,#1d0836 0%,#6b0f3a 50%,#b4360b 100%);
+background-repeat:repeat,no-repeat,no-repeat,no-repeat;background-size:120px 120px,auto,auto,cover}
+body{margin:0;color:var(--ink);font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;line-height:1.5;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+.toran{display:block;filter:drop-shadow(0 3px 4px rgba(0,0,0,.35))}
+.hero{text-align:center;padding:6px 16px 14px}
+.badge{border:1px solid var(--gold);color:var(--gold);padding:3px 14px;border-radius:99px;font-size:12px;letter-spacing:2px;display:inline-block;background:rgba(0,0,0,.25)}
+h1{margin:6px 0 4px;font-family:'Georgia','Times New Roman',serif;font-size:clamp(34px,10vw,64px);color:var(--gold);letter-spacing:3px;line-height:1.05;text-shadow:0 3px 14px rgba(0,0,0,.55)}
+.tag{color:var(--ink);margin:0 auto;max-width:520px;opacity:.92}
+.facts{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:16px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 16px;backdrop-filter:blur(5px)}.fact small{display:block;color:var(--mute);font-size:11px;letter-spacing:1px}.fact b{color:var(--gold)}
+nav{display:flex;gap:6px;justify-content:center;padding:10px 8px;flex-wrap:wrap}nav a{color:var(--ink);background:rgba(0,0,0,.3);border:1px solid var(--line);padding:8px 16px;border-radius:99px;text-decoration:none;font-size:14px}nav a.on{background:var(--gold);color:#2a0a14;border-color:var(--gold);font-weight:700}
+main{max-width:780px;margin:0 auto;padding:0 14px 40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:14px;backdrop-filter:blur(6px);box-shadow:0 8px 30px rgba(0,0,0,.28)}
+h2{margin:0 0 4px;font-size:20px;color:var(--gold)}.sub,.note{color:var(--mute);font-size:14px;margin:0 0 6px}.note{margin-top:10px;background:rgba(245,184,61,.1);border-left:3px solid var(--gold);padding:8px 10px;border-radius:6px;color:var(--ink)}
+label{display:block;font-size:13px;color:var(--mute);margin:12px 0 4px}label i{color:var(--bad);font-style:normal}
+input,select,textarea{width:100%;padding:12px;border-radius:9px;border:1px solid var(--line);background:rgba(18,4,28,.92);color:var(--ink);font-size:15px;font-family:inherit}input:focus,select:focus,textarea:focus{outline:2px solid var(--gold)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:560px){.row{grid-template-columns:1fr}}
+.btn{background:var(--gold);color:#2a0a14;border:0;padding:12px 18px;border-radius:10px;font-weight:700;cursor:pointer;font-size:15px;margin-top:14px;margin-right:6px;text-decoration:none;display:inline-block}.btn.block{display:block;width:100%;text-align:center}.btn.alt{background:transparent;color:var(--gold);border:1px solid var(--gold)}.btn.sm{padding:6px 12px;font-size:12px;margin:0 4px 0 0}.btn.red{background:#e0403a;color:#fff}.btn:disabled{opacity:.5}
+.msg{margin-top:12px;padding:10px 12px;border-radius:9px;font-size:14px}.e{background:#5a1a1a;color:var(--bad)}.g{background:#143d2c;color:#9ef0c8}
+.fees{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}@media(max-width:560px){.fees{grid-template-columns:repeat(2,1fr)}}
+.fee{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center}.fee small{display:block;color:var(--mute);font-size:12px}.fee b{font-size:22px;color:var(--gold)}
+.amtbox{font-size:30px;font-weight:800;color:var(--gold);padding:6px 0}
+.pay{display:flex;gap:18px;align-items:center;flex-wrap:wrap;background:rgba(0,0,0,.28);border:1px dashed var(--gold);border-radius:12px;padding:14px;margin-top:10px}.amt{font-size:30px;font-weight:800;color:var(--gold);line-height:1}
+.qrbox{background:#fff;padding:8px;border-radius:10px;width:166px;height:166px}.qrbox img,.qrbox canvas{width:150px!important;height:150px!important}
+.hide{display:none}canvas.passc{max-width:100%;height:auto;border-radius:12px;margin-top:12px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:8px;margin-bottom:12px}.stat{background:rgba(0,0,0,.3);border-radius:10px;padding:10px;text-align:center}.stat b{display:block;font-size:21px;color:var(--gold)}.stat span{font-size:12px;color:var(--mute)}
+.scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{color:var(--mute)}
+.pill{padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600}.Verified{background:#143d2c;color:var(--ok)}.Pending{background:#4a3a10;color:var(--gold)}.Rejected{background:#4a1616;color:var(--bad)}
+.res{text-align:center;padding:22px;border-radius:12px;margin-top:14px;border:2px solid}.res b{font-size:22px;display:block}.res.ok{background:#143d2c;border-color:var(--ok)}.res.bad{background:#4a1616;border-color:#e0403a}.res.warn{background:#4a3a10;border-color:var(--gold)}
+#srv{max-width:780px;margin:0 auto 10px;padding:8px 12px;border-radius:9px;font-size:13px}#srv.ok{background:#143d2c;color:#9ef0c8;max-width:340px;text-align:center}#srv.bad{background:#5a1a1a;color:var(--bad)}#srv.wait{color:var(--mute);text-align:center}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:20;display:flex;align-items:center;justify-content:center;padding:16px;flex-direction:column}.modal.hide{display:none}.modal img{max-width:100%;max-height:80vh;border-radius:10px;background:#fff}
+video{width:100%;border-radius:10px;margin-top:10px}ul.rules{margin:6px 0 0;padding-left:18px;color:var(--mute);font-size:14px}footer{text-align:center;color:var(--mute);font-size:12px;padding:6px 16px 30px}
+</style>
+</head>
+<body>
+<svg class="toran" width="100%" height="78" aria-hidden="true"><defs><pattern id="tp" width="64" height="78" patternUnits="userSpaceOnUse"><path d="M32 0V22" stroke="#f5b83d" stroke-width="2"/><path d="M32 22l-14 22 14 6 14-6z" fill="#2e9e5b"/><circle cx="32" cy="52" r="11" fill="#ff8a1f"/><circle cx="32" cy="52" r="6" fill="#ffc83d"/><path d="M24 62q8 14 16 0z" fill="#f5b83d"/><circle cx="32" cy="72" r="3" fill="#fff4e0"/></pattern></defs><path d="M0 4H4000" stroke="#f5b83d" stroke-width="4"/><rect y="4" width="100%" height="74" fill="url(#tp)"/></svg>
+<section class="hero">
+  <svg width="130" height="96" viewBox="0 0 130 96" aria-hidden="true"><defs><linearGradient id="dg" x1="0" x2="1"><stop offset="0" stop-color="#ffd166"/><stop offset="1" stop-color="#c2410c"/></linearGradient></defs>
+    <g transform="translate(65 48) rotate(40)"><rect x="-5" y="-46" width="10" height="92" rx="5" fill="url(#dg)"/><rect x="-5" y="-30" width="10" height="5" fill="#e11d48"/><rect x="-5" y="-6" width="10" height="5" fill="#e11d48"/><rect x="-5" y="18" width="10" height="5" fill="#e11d48"/></g>
+    <g transform="translate(65 48) rotate(-40)"><rect x="-5" y="-46" width="10" height="92" rx="5" fill="url(#dg)"/><rect x="-5" y="-30" width="10" height="5" fill="#e11d48"/><rect x="-5" y="-6" width="10" height="5" fill="#e11d48"/><rect x="-5" y="18" width="10" height="5" fill="#e11d48"/></g></svg><br>
+  <span class="badge">BIT RAIPUR · CULTURAL COMMITTEE</span>
+  <h1>RAAS GARBA 2026</h1>
+  <p class="tag">STAFF PORTAL · On-spot desk, payment admin and gate scanning. Authorized organizers only.</p>
+  <div class="facts"><div class="fact"><small>DATE</small><b id="fDate"></b></div><div class="fact"><small>TIME</small><b id="fTime"></b></div><div class="fact"><small>VENUE</small><b id="fVenue"></b></div></div>
+</section>
+<nav><a href="#desk" data-v="desk">Desk</a><a href="#admin" data-v="admin">Admin</a><a href="#gate" data-v="gate">Gate</a></nav>
+<div id="srv" class="wait">Checking server…</div>
+<main>
+
+
+
+<section id="v-desk" class="hide">
+  <div class="card" id="dLock"><h2>On-spot desk sign-in</h2><input id="dPin" type="password" placeholder="Desk PIN"><button class="btn" id="dAuth">Unlock</button><div id="dMsg"></div></div>
+  <div class="card hide" id="dPanel"><h2>On-spot registration</h2><p class="sub">Collect the payment first (cash, or UPI on this phone). The pass is issued immediately.</p>
+    <div id="dForm"></div><button class="btn block" id="dGo">Register &amp; issue pass</button><div id="dReg"></div>
+    <canvas id="dpass" class="passc hide" width="600" height="900"></canvas><button class="btn hide" id="dDl">Download pass (PNG)</button><button class="btn alt hide" id="dNew">New registration</button></div>
+</section>
+
+<section id="v-admin" class="hide">
+  <div class="card" id="aLock"><h2>Admin sign-in</h2><input id="aPin" type="password" placeholder="Admin PIN"><button class="btn" id="aGo">Unlock</button><div id="aMsg"></div></div>
+  <div id="aPanel" class="hide">
+    <div class="stats" id="aStats"></div>
+    <div class="card"><h2>Auto-verify from bank statement</h2><p class="sub">Download your bank / UPI account statement as CSV (for an Excel statement: open it and Save As CSV) and upload it here. Online payments whose UTR and amount match the statement are listed, and you verify them all with one click. Cash payments are not affected.</p>
+      <input type="file" id="stFile" accept=".csv,text/csv"><textarea id="stTxt" rows="2" placeholder="…or paste the CSV text here" style="margin-top:8px"></textarea>
+      <button class="btn" id="stGo">Match payments</button><div id="stOut"></div></div>
+    <div class="card"><div class="row"><input id="aq" placeholder="Search name, phone, UTR / ref…"><select id="af"><option value="">All</option><option>Pending</option><option>Verified</option><option>Rejected</option></select></div>
+      <div class="scroll" style="margin-top:10px"><table><thead><tr><th>Name</th><th>Phone</th><th>Participation</th><th>Mode</th><th>₹</th><th>UTR / Ref</th><th>Status</th><th>In</th><th>Proof</th><th>Action</th></tr></thead><tbody id="aRows"></tbody></table></div>
+      <button class="btn alt" id="aRef">Refresh</button><button class="btn alt" id="aExp">Export CSV</button><div id="aNote"></div></div>
+  </div>
+</section>
+
+<section id="v-gate" class="hide">
+  <div class="card" id="gLock"><h2>Gate sign-in</h2><input id="gPin" type="password" placeholder="Gate PIN"><button class="btn" id="gGo">Start</button><div id="gMsg"></div></div>
+  <div class="card hide" id="gPanel"><div class="stats"><div class="stat"><b id="gIn">–</b><span>People inside</span></div></div>
+    <input id="gCode" placeholder="Pass code, e.g. RG26-XXXXXXXX" autocomplete="off"><button class="btn" id="gChk">Verify</button><button class="btn alt" id="gCam">Scan with camera</button><video id="vid" class="hide" playsinline muted></video><div id="gRes"></div></div>
+</section>
+</main>
+<footer>Raas Garba 2026 · BIT Raipur · Entry subject to organizer discretion.</footer>
+
+<div id="shotModal" class="modal hide"><img id="shotImg" alt="Payment screenshot"><button class="btn" id="shotClose">Close</button></div>
+<div id="errBar" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:9;background:#e0403a;color:#fff;padding:10px 14px;font:13px/1.4 monospace"></div>
+<script>addEventListener('error',function(e){var b=document.getElementById('errBar');b.style.display='block';b.textContent='Page error: '+e.message+' (line '+e.lineno+')'});</script>
+<script>
+/* ===== CONFIG: edit before deploying ===== */
+const API_URL="https://script.google.com/macros/s/AKfycbzPUia7emy14xx8_SooQD5px5NbAojnZK5GNUxmYt-Yj_klwZpA3rbZJ2MsAEAK3dVFaA/exec";
+const CFG={DATE:"Fri, 16 Oct 2026",TIME:"11:30 AM",VENUE:"BIT Raipur Campus",UPI_ID:"deepmalapandey54@okaxis",PAYEE:"deepmala pandey",
+FEES:{Attend:100,Solo:100,Duet:150,Group:300,Spot50:50}, /* must match FEES in Code.gs */
+RULES:["Carry your QR pass and college ID card to the gate.","Each pass is non-transferable. Duet and group passes admit the registered number of people only.","Traditional attire is encouraged. Respect all participants.","Outside food, drinks and prohibited items are not allowed.","The organizers' decision on entry is final."]};
+const DEGREES=["B.Tech","Pharmacy","BCA","BBA","B.Com","Other"];
+const BRANCHES=["CSE","AIML","ECE","EEE","Civil","Mech","Other"];
+/* ======================================== */
+const $=id=>document.getElementById(id),g=(p,k)=>$(p+k),esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const say=(id,cls,t)=>{$(id).className='msg '+cls;$(id).textContent=t};
+var aPin='',dPin='',gPin='',rows=[],stream=null,scanning=false,QRS={},SHOTS={},matched=[];   /* declared first: route() runs at startup */
+async function api(action,data){
+  if(!/^https:\/\/script\.google\.com\/macros\/s\/.+\/exec$/.test(API_URL))throw new Error('Backend URL is not set correctly in index.html');
+  let r;try{r=await fetch(API_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action,...data})})}catch(x){throw new Error('Cannot reach the server. In Apps Script open Deploy → Manage deployments → pencil → set "Who has access: Anyone" → New version → Deploy. Then make sure API_URL in index.html is your /exec link.')}
+  let j;try{j=await r.json()}catch(x){throw new Error('Backend did not reply with data. Redeploy the Apps Script as Web app with access: Anyone.')}
+  if(!j.ok){if(j.error==='Unknown action')throw new Error('The server is running OLD code. In Apps Script: Deploy → Manage deployments → pencil → Version: New version → Deploy.');throw new Error(j.error||'Request failed')}return j}
+const plabel=(part,type)=>part==='Spot50'?'₹50 SPOT PASS':part&&part!=='Attend'?part.toUpperCase()+' PARTICIPANT':String(type).toUpperCase()+' PASS';
+const upiLink=a=>`upi://pay?pa=${encodeURIComponent(CFG.UPI_ID)}&pn=${encodeURIComponent(CFG.PAYEE)}&am=${a}&cu=INR&tn=${encodeURIComponent('Raas Garba 2026')}`;
+
+$('fDate').textContent=CFG.DATE;$('fTime').textContent=CFG.TIME;$('fVenue').textContent=CFG.VENUE;
+
+/* ---- registration form (used by the on-spot desk) ---- */
+function formHTML(p,spot){const opt=a=>a.map(x=>`<option>${x}</option>`).join('');return `
+<label>Full name <i>*</i></label><input id="${p}n" autocomplete="off" placeholder="Full name">
+<div class="row"><div><label>Mobile <i>*</i></label><input id="${p}p" inputmode="numeric" maxlength="10" placeholder="10-digit number"></div>
+<div><label>Email ${spot?'(optional)':'<i>*</i>'}</label><input id="${p}m" type="email" placeholder="you@example.com"></div></div>
+<div class="row"><div><label>Degree <i>*</i></label><select id="${p}deg"><option value="">Select</option>${opt(DEGREES)}</select></div>
+<div id="${p}bw" class="hide"><label>Branch <i>*</i></label><select id="${p}b"><option value="">Select</option>${opt(BRANCHES)}</select></div></div>
+<div class="row"><div><label>Year <i>*</i></label><select id="${p}y"><option value="">Select</option>${opt(['1st Year','2nd Year','3rd Year','4th Year','Alumni'])}</select></div>
+<div><label>Pass type</label><select id="${p}t">${opt(['Student','Guest','Alumni'])}</select></div></div>
+<label>Participation <i>*</i></label><select id="${p}part"><option value="Attend">Attend only</option><option value="Solo">Solo performance</option><option value="Duet">Duet performance</option><option value="Group">Group performance</option>${spot?'<option value="Spot50">₹50 pass (on-spot only)</option>':''}</select>
+<div id="${p}duet" class="hide"><div class="row"><div><label>Partner name <i>*</i></label><input id="${p}pn" placeholder="Duet partner"></div><div><label>Partner mobile</label><input id="${p}pp" inputmode="numeric" maxlength="10"></div></div></div>
+<div id="${p}group" class="hide"><div class="row"><div><label>Group name <i>*</i></label><input id="${p}gn"></div><div><label>Number of members <i>*</i></label><input id="${p}gc" type="number" min="3" max="6" placeholder="3 to 6 (max 6)"></div></div>
+<label>Member names <i>*</i></label><textarea id="${p}gm" rows="2" placeholder="Names separated by commas"></textarea></div>
+<div class="note" id="${p}note"></div>
+<h2 style="margin-top:20px">Payment</h2>
+<div class="row"><div><label>Payment mode</label><select id="${p}mode"><option value="Online">Online (UPI)</option><option value="Cash">Cash</option></select></div><div><label>Amount payable</label><div class="amtbox" id="${p}amt"></div></div></div>
+<div id="${p}online"><div class="pay"><div class="qrbox" id="${p}qr"></div><div><div class="sub">Scan with GPay / PhonePe / Paytm / BHIM</div><div class="sub" style="color:var(--ink);margin-top:4px">Pay to: <b>${esc(CFG.PAYEE)}</b><br>UPI ID: <b>${esc(CFG.UPI_ID)}</b> <button type="button" class="btn alt sm" id="${p}copy" style="margin:0 0 0 6px">Copy</button></div></div></div>
+<label>UPI transaction ID (UTR, 12 digits) <i>*</i></label><input id="${p}u" inputmode="numeric" maxlength="12" placeholder="Shown in your UPI app after paying">
+<label>Payment screenshot (recommended)</label><input id="${p}shot" type="file" accept="image/*"><div class="sub" id="${p}shotmsg" style="margin-top:6px">Upload the screenshot of your successful UPI payment. It speeds up verification.</div></div>
+<div id="${p}cash" class="msg g hide">${spot?'Collect the cash amount shown above before issuing the pass.':'Pay the amount in cash at the registration desk on the event day. You will get a reference number after submitting; show it at the desk. Your pass is issued once the cash is received and verified.'}</div>`}
+function compress(file){return new Promise((res,rej)=>{
+  if(!file.type||file.type.indexOf('image/')!==0)return rej(new Error('Please choose an image file.'));
+  const fr=new FileReader();fr.onerror=()=>rej(new Error('Could not read the image.'));
+  fr.onload=()=>{const img=new Image();img.onerror=()=>rej(new Error('Could not open this image. Please use a JPG or PNG screenshot.'));
+    img.onload=()=>{const k=Math.min(1,1100/Math.max(img.width,img.height)),c=document.createElement('canvas');c.width=Math.max(1,Math.round(img.width*k));c.height=Math.max(1,Math.round(img.height*k));c.getContext('2d').drawImage(img,0,0,c.width,c.height);res(c.toDataURL('image/jpeg',0.72))};
+    img.src=fr.result};fr.readAsDataURL(file)})}
+function wire(p){
+  g(p,'copy').addEventListener('click',async()=>{const b=g(p,'copy');let ok=false;
+    try{await navigator.clipboard.writeText(CFG.UPI_ID);ok=true}catch(e){try{const t=document.createElement('textarea');t.value=CFG.UPI_ID;t.style.cssText='position:fixed;opacity:0';document.body.appendChild(t);t.select();ok=document.execCommand('copy');t.remove()}catch(x){}}
+    b.textContent=ok?'Copied ✔':'Copy failed';setTimeout(()=>{b.textContent='Copy'},1800)});
+  g(p,'shot').addEventListener('change',async()=>{const f=g(p,'shot').files[0],m=g(p,'shotmsg');SHOTS[p]='';if(!f){m.textContent='Upload the screenshot of your successful UPI payment. It speeds up verification.';return}
+    m.textContent='Preparing image…';try{SHOTS[p]=await compress(f);m.textContent='✔ Screenshot attached ('+Math.round(SHOTS[p].length*0.75/1024)+' KB)'}catch(e){g(p,'shot').value='';m.textContent='⚠ '+e.message}});
+  try{QRS[p]=new QRCode(g(p,'qr'),{text:upiLink(CFG.FEES.Attend),width:150,height:150})}catch(e){QRS[p]=null;g(p,'qr').innerHTML='<div style="color:#2a0a14;font-size:12px;padding:8px">QR could not load. Use the Pay button or UPI ID: '+esc(CFG.UPI_ID)+'</div>'}
+  const upd=()=>{const part=g(p,'part').value,fee=CFG.FEES[part],mode=g(p,'mode').value;
+    g(p,'bw').classList.toggle('hide',g(p,'deg').value!=='B.Tech');g(p,'duet').classList.toggle('hide',part!=='Duet');g(p,'group').classList.toggle('hide',part!=='Group');
+    g(p,'amt').textContent='₹'+fee;
+    g(p,'note').textContent=part==='Attend'?`Entry registration fee: ₹${fee}.`:part==='Spot50'?`Special on-spot pass: ₹${fee}. Admits 1 person.`:`${part} participation fee: ₹${fee}. As a participant you do NOT pay the separate entry fee.${part==='Duet'?' This pass admits 2 people.':part==='Group'?' This pass admits your whole group.':''}`;
+    g(p,'online').classList.toggle('hide',mode!=='Online');g(p,'cash').classList.toggle('hide',mode!=='Cash');
+    const l=upiLink(fee);try{QRS[p]&&(QRS[p].clear(),QRS[p].makeCode(l))}catch(e){}};
+  ['part','mode','deg'].forEach(k=>g(p,k).addEventListener('change',upd));upd()}
+function initForm(p,spot){SHOTS[p]='';$(p==='r'?'rForm':'dForm').innerHTML=formHTML(p,spot);wire(p)}
+function getData(p){const v=k=>g(p,k).value.trim();return{name:v('n'),phone:v('p').replace(/\D/g,''),email:v('m'),degree:v('deg'),branch:v('b'),year:v('y'),type:v('t'),part:v('part'),pn:v('pn'),pp:v('pp').replace(/\D/g,''),gn:v('gn'),gc:v('gc'),gm:v('gm'),mode:v('mode'),utr:v('u').replace(/\D/g,''),shot:v('mode')==='Online'?(SHOTS[p]||''):''}}
+function check(d,spot){const em=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  if(d.name.length<3)return'Enter the full name.';if(!/^[6-9]\d{9}$/.test(d.phone))return'Enter a valid 10-digit mobile number.';
+  if(spot?(d.email&&!em.test(d.email)):!em.test(d.email))return'Enter a valid email address.';
+  if(!d.degree)return'Select the degree.';if(d.degree==='B.Tech'&&!d.branch)return'Select the branch.';if(!d.year)return'Select the year.';
+  if(d.part==='Duet'&&d.pn.length<3)return"Enter your duet partner's name.";
+  if(d.part==='Group'){if(d.gn.length<2)return'Enter the group name.';const c=Number(d.gc);if(!(Number.isInteger(c)&&c>=3&&c<=6))return'Group size must be between 3 and 6 (maximum 6 members).';if(d.gm.length<3)return'Enter the names of the group members.'}
+  if(d.mode==='Online'&&d.utr.length!==12)return'Pay first, then enter the 12-digit UTR.';return''}
+initForm('d',true);
+
+/* ---- pass drawing ---- */
+function drawPass(canvasId,p){
+  const tmp=document.createElement('div');tmp.style.cssText='position:absolute;left:-9999px';document.body.appendChild(tmp);
+  try{new QRCode(tmp,{text:p.code,width:400,height:400,correctLevel:QRCode.CorrectLevel.M})}catch(e){}
+  setTimeout(()=>{const qc=tmp.querySelector('canvas'),c=$(canvasId),x=c.getContext('2d');
+    const gr=x.createLinearGradient(0,0,0,900);gr.addColorStop(0,'#5a1230');gr.addColorStop(1,'#2a0a14');x.fillStyle=gr;x.fillRect(0,0,600,900);
+    x.strokeStyle='#f5b83d';x.lineWidth=4;x.strokeRect(14,14,572,872);x.textAlign='center';
+    x.fillStyle='#f5b83d';x.font='600 18px sans-serif';x.fillText('BIT RAIPUR PRESENTS',300,66);x.font='bold 54px Georgia,serif';x.fillText('RAAS GARBA',300,128);x.fillText('2026',300,186);
+    x.fillStyle='#fff4e0';x.font='16px sans-serif';x.fillText('OFFICIAL ENTRY PASS · PAYMENT VERIFIED',300,218);
+    x.fillStyle='#f5b83d';x.font='bold 17px sans-serif';x.fillText((CFG.DATE+' · '+CFG.TIME).toUpperCase(),300,244);
+    x.fillStyle='#fff';x.fillRect(100,262,400,400);if(qc)x.drawImage(qc,110,272,380,380);else{x.fillStyle='#2a0a14';x.font='bold 22px monospace';x.fillText(p.code,300,470)}
+    x.fillStyle='#fff4e0';x.font='bold 30px sans-serif';x.fillText(p.name.length>26?p.name.slice(0,25)+'…':p.name,300,712);
+    x.font='18px sans-serif';x.fillStyle='#d9b99b';x.fillText([p.branch,p.year].filter(Boolean).join('  ·  '),300,746);
+    x.fillStyle='#f5b83d';x.font='bold 21px sans-serif';
+    x.fillText(plabel(p.part,p.type)+(p.admits>1?' · ADMITS '+p.admits:''),300,792);
+    x.fillStyle='#fff4e0';x.font='16px monospace';x.fillText(p.code,300,830);x.fillStyle='#d9b99b';x.font='13px sans-serif';x.fillText('Non-transferable · Show this QR at the gate',300,860);
+    tmp.remove();$(canvasId).classList.remove('hide')},150)}
+function saveCanvas(id,code){const a=document.createElement('a');a.download=`RaasGarba2026_${code}.png`;a.href=$(id).toDataURL('image/png');a.click()}
+
+/* ---- on-spot desk ---- */
+let deskCode='';
+$('dAuth').onclick=async()=>{dPin=$('dPin').value;try{await api('deskAuth',{pin:dPin});$('dLock').classList.add('hide');$('dPanel').classList.remove('hide')}catch(e){say('dMsg','e',e.message)}};
+$('dPin').onkeydown=e=>{if(e.key==='Enter')$('dAuth').click()};
+$('dGo').onclick=async()=>{const d=getData('d'),er=check(d,true);if(er)return say('dReg','e',er);
+  $('dGo').disabled=true;say('dReg','g','Registering…');
+  try{const r=await api('spot',{pin:dPin,...d});deskCode=r.pass.code;
+    say('dReg','g',`✔ ${r.pass.name} registered. ₹${r.amount} ${r.mode==='Cash'?'cash':'online'} received. Pass code: ${deskCode}${r.pass.admits>1?' (admits '+r.pass.admits+')':''}${d.shot&&!r.shot?' · Screenshot NOT saved'+(r.shotErr?': '+r.shotErr:''):''}`);
+    drawPass('dpass',r.pass);$('dDl').classList.remove('hide');$('dNew').classList.remove('hide');$('dGo').classList.add('hide')}
+  catch(e){say('dReg','e',e.message)}$('dGo').disabled=false};
+$('dDl').onclick=()=>saveCanvas('dpass',deskCode);
+$('dNew').onclick=()=>{initForm('d',true);['dpass','dDl','dNew'].forEach(i=>$(i).classList.add('hide'));$('dGo').classList.remove('hide');$('dReg').innerHTML='';window.scrollTo({top:0,behavior:'smooth'})};
+
+/* ---- admin ---- */
+async function aLoad(){const r=await api('list',{pin:aPin});rows=r.rows;aRender()}
+$('aGo').onclick=async()=>{aPin=$('aPin').value;try{await aLoad();$('aLock').classList.add('hide');$('aPanel').classList.remove('hide')}catch(e){say('aMsg','e',e.message)}};
+$('aPin').onkeydown=e=>{if(e.key==='Enter')$('aGo').click()};
+function aRender(){
+  const by=s=>rows.filter(r=>r.status===s),ver=by('Verified'),sum=a=>a.reduce((x,r)=>x+Number(r.amount||0),0);
+  const cnt=p=>rows.filter(r=>r.part===p&&r.status!=='Rejected').length;
+  $('aStats').innerHTML=[['Total',rows.length],['Verified',ver.length],['Pending',by('Pending').length],['Rejected',by('Rejected').length],['Collected','₹'+sum(ver)],['Cash','₹'+sum(ver.filter(r=>r.mode==='Cash'))],['Online','₹'+sum(ver.filter(r=>r.mode!=='Cash'))],['Solo',cnt('Solo')],['Duet',cnt('Duet')],['Group',cnt('Group')],['₹50 pass',cnt('Spot50')],['Inside',rows.reduce((a,r)=>a+(r.used||0),0)]].map(s=>`<div class="stat"><b>${s[1]}</b><span>${s[0]}</span></div>`).join('');
+  const q=$('aq').value.toLowerCase(),f=$('af').value;
+  $('aRows').innerHTML=rows.filter(r=>(!q||[r.name,r.phone,r.utr,r.code].join(' ').toLowerCase().includes(q))&&(!f||r.status===f)).map(r=>`<tr><td>${esc(r.name)}</td><td>${esc(r.phone)}</td><td title="${esc(r.details)}">${esc(r.part==='Spot50'?'₹50 pass':r.part)}${r.admits>1?' ×'+r.admits:''}</td><td>${esc(r.mode)}</td><td>${esc(r.amount)}</td><td>${esc(r.utr)}</td><td><span class="pill ${r.status}">${r.status}</span></td><td>${r.used||0}/${r.admits}</td><td>${r.shot?`<button class="btn sm alt" data-shot="${r.row}">View</button>`:''}</td><td>${r.status!=='Verified'?`<button class="btn sm" data-r="${r.row}" data-s="Verified">Verify</button>`:''}${r.status!=='Rejected'&&!r.used?`<button class="btn sm red" data-r="${r.row}" data-s="Rejected">Reject</button>`:''}</td></tr>`).join('')||'<tr><td colspan="10">No registrations.</td></tr>'}
+$('aRows').onclick=async e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.shot){showShot(Number(b.dataset.shot),b);return}b.disabled=true;
+  try{const r=await api('setStatus',{pin:aPin,row:Number(b.dataset.r),status:b.dataset.s});const it=rows.find(x=>x.row===Number(b.dataset.r));if(it){it.status=r.status;if(r.code)it.code=r.code}aRender();
+    say('aNote',r.emailed?'g':'e',r.emailed?'Updated. Email sent to the registrant.':'Updated, but the email could not be sent (check the Gmail daily limit). The student can still download the pass from My Pass.')}
+  catch(x){say('aNote','e',x.message);b.disabled=false}};
+['aq','af'].forEach(k=>$(k).addEventListener('input',aRender));$('aRef').onclick=()=>aLoad().then(()=>say('aNote','g','Refreshed.'));
+$('aExp').onclick=()=>{const csv='Name,Phone,Email,Branch,Year,Type,Participation,Details,Admits,Mode,Amount,UTR/Ref,Status,Pass Code,Entries Used,Source\n'+rows.map(r=>[r.name,r.phone,r.email,r.branch,r.year,r.type,r.part,r.details,r.admits,r.mode,r.amount,r.utr,r.status,r.code,r.used,r.source].map(v=>`"${String(v==null?'':v).replace(/"/g,'""')}"`).join(',')).join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='raas-garba-registrations.csv';a.click()};
+
+/* ---- payment screenshot viewer ---- */
+async function showShot(row,btn){const old=btn.textContent;btn.disabled=true;btn.textContent='…';
+  try{const r=await api('shot',{pin:aPin,row});$('shotImg').src=r.image;$('shotModal').classList.remove('hide')}catch(e){say('aNote','e',e.message)}btn.disabled=false;btn.textContent=old}
+$('shotClose').onclick=()=>{$('shotModal').classList.add('hide');$('shotImg').removeAttribute('src')};
+
+/* ---- bank statement matcher ---- */
+function parseCSV(t){const out=[];let r=[],f='',q=false;for(let i=0;i<t.length;i++){const ch=t[i];if(q){if(ch=='"'&&t[i+1]=='"'){f+='"';i++}else if(ch=='"')q=false;else f+=ch}else if(ch=='"')q=true;else if(ch==','){r.push(f);f=''}else if(ch=='\n'||ch=='\r'){if(ch=='\r'&&t[i+1]=='\n')i++;r.push(f);out.push(r);r=[];f=''}else f+=ch}if(f||r.length){r.push(f);out.push(r)}return out.filter(x=>x.some(y=>y.trim()))}
+function reconcile(text){
+  const out=$('stOut'),found={};
+  parseCSV(text).forEach(r=>{const toks=r.join(' ').match(/\d+/g)||[];const ids=toks.filter(t=>t.length===12);if(!ids.length)return;
+    const nums=r.map(c=>parseFloat(String(c).replace(/,/g,'').replace(/[^\d.\-]/g,''))).filter(n=>!isNaN(n));
+    ids.forEach(id=>{(found[id]=found[id]||[]).push(...nums)})});
+  const pend=rows.filter(r=>r.status==='Pending'&&r.mode!=='Cash'&&/^\d{12}$/.test(r.utr)),ok=[],bad=[],miss=[];
+  pend.forEach(r=>{const n=found[r.utr];if(!n)miss.push(r);else if(n.some(x=>Math.abs(x-Number(r.amount))<0.005))ok.push(r);else bad.push(r)});
+  matched=ok;const li=a=>a.slice(0,60).map(r=>`<tr><td>${esc(r.name)}</td><td>${esc(r.utr)}</td><td>₹${esc(r.amount)}</td></tr>`).join('');
+  out.innerHTML=`<div class="msg ${ok.length?'g':'e'}">✔ Matched: ${ok.length} · ⚠ Amount differs: ${bad.length} · Not in statement: ${miss.length} (of ${pend.length} pending online payments)</div>`+
+   (ok.length?`<div class="scroll"><table><thead><tr><th>Name</th><th>UTR</th><th>Amount</th></tr></thead><tbody>${li(ok)}</tbody></table></div><button class="btn" id="stVerify">Verify ${ok.length} matched payment${ok.length>1?'s':''}</button>`:'')+
+   (bad.length?`<p class="sub" style="margin-top:10px">Amount differs (check these manually): ${bad.slice(0,30).map(r=>esc(r.name)+' ('+esc(r.utr)+')').join(', ')}</p>`:'')}
+$('stGo').onclick=()=>{const f=$('stFile').files[0];if(!rows.length)return say('aNote','e','Registrations are not loaded yet. Press Refresh first.');
+  if(f){const fr=new FileReader();fr.onload=()=>reconcile(fr.result);fr.readAsText(f)}else if($('stTxt').value.trim())reconcile($('stTxt').value);else say('aNote','e','Choose a CSV statement file or paste its text.')};
+$('stOut').onclick=async e=>{const b=e.target.closest('#stVerify');if(!b)return;b.disabled=true;let done=0,fail=0;
+  try{for(let i=0;i<matched.length;i+=25){const r=await api('verifyMany',{pin:aPin,rows:matched.slice(i,i+25).map(x=>x.row)});
+      (r.verified||[]).forEach(v=>{const it=rows.find(x=>x.row===v.row);if(it){it.status='Verified';it.code=v.code}});done+=r.done;fail+=r.failedMail;aRender();b.textContent='Verified '+done+' of '+matched.length+'…'}
+    b.textContent='✔ Done: '+done+' verified';say('aNote',fail?'e':'g',fail?`${done} verified. ${fail} email(s) could not be sent (Gmail daily limit); those students can download the pass from My Pass.`:`${done} payments verified and passes emailed.`)}
+  catch(x){say('aNote','e',x.message);b.disabled=false}};
+
+/* ---- gate ---- */
+$('gGo').onclick=async()=>{gPin=$('gPin').value;try{const r=await api('gate',{pin:gPin,code:'-'});$('gIn').textContent=r.checkedIn;$('gLock').classList.add('hide');$('gPanel').classList.remove('hide')}catch(e){say('gMsg','e',e.message)}};
+$('gPin').onkeydown=e=>{if(e.key==='Enter')$('gGo').click()};
+async function verify(code){
+  try{const r=await api('gate',{pin:gPin,code});$('gIn').textContent=r.checkedIn;
+    const h=(c,t,s)=>$('gRes').innerHTML=`<div class="res ${c}"><b>${t}</b>${esc(s)}</div>`;
+    if(r.result==='ok')h('ok','✔ ENTRY ALLOWED',`${r.name} · ${plabel(r.part,r.type).toLowerCase()}${r.of>1?` · Person ${r.n} of ${r.of}`:''}`);
+    else if(r.result==='used')h('warn','⚠ ALREADY USED',`${r.name}: all ${r.admits} entr${r.admits>1?'ies':'y'} already used`);
+    else h('bad','✖ INVALID PASS','Not found or payment not verified.')}
+  catch(e){$('gRes').innerHTML=`<div class="res bad"><b>Error</b>${esc(e.message)}</div>`}}
+$('gChk').onclick=()=>{const c=$('gCode').value.trim();if(c){verify(c);$('gCode').value=''}};$('gCode').onkeydown=e=>{if(e.key==='Enter')$('gChk').click()};
+function stopCam(){scanning=false;stream&&stream.getTracks().forEach(t=>t.stop());$('vid').classList.add('hide')}
+$('gCam').onclick=async()=>{
+  if(scanning)return stopCam();
+  if(!('BarcodeDetector' in window)){$('gRes').innerHTML='<div class="res warn"><b>Camera scan unsupported</b>Use Chrome on Android, or type the pass code.</div>';return}
+  try{stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}});const v=$('vid');v.srcObject=stream;v.classList.remove('hide');await v.play();scanning=true;
+    const d=new BarcodeDetector({formats:['qr_code']});
+    (async function loop(){while(scanning){try{const r=await d.detect(v);if(r.length){stopCam();await verify(r[0].rawValue);setTimeout(()=>{$('gCam').click()},1000);return}}catch(e){}await new Promise(s=>setTimeout(s,300))}})()}
+  catch(e){$('gRes').innerHTML='<div class="res warn"><b>Camera blocked</b>Allow camera permission, or type the code.</div>'}};
+
+/* ---- router (runs last) ---- */
+function route(){const v=(location.hash||'#admin').slice(1),ok=['desk','admin','gate'];const cur=ok.includes(v)?v:'admin';
+  ok.forEach(k=>{$('v-'+k).classList.toggle('hide',k!==cur);document.querySelector(`nav [data-v=${k}]`).classList.toggle('on',k===cur)});if(cur!=='gate')stopCam()}
+addEventListener('hashchange',route);route();
+async function checkBackend(){const b=$('srv');try{const r=await api('ping');b.className='ok';b.textContent='✔ Server connected ('+r.version+')'}catch(e){b.className='bad';b.textContent='⚠ '+e.message}}
+checkBackend();
+</script>
+</body>
+</html>
